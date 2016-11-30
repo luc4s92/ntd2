@@ -69,9 +69,11 @@ $(function renderPagina(){
 
      $('#formComentario').submit(function(ev){
        event.preventDefault();
-  
-   console.log($('#formComentario').serialize());
-       $.post( "api/comentarios", $('#formComentario').serialize(), function( comentarios ) {
+
+       console.log($('#formComentario').serialize());
+       var id_producto = $(this).attr("data-idproducto");
+       $.post( "api/comentarios", $('#formComentario').serialize(), function( comentarios,id_producto ) {
+
        console.log($('#formComentario').serialize());
        });
 

@@ -12,9 +12,9 @@ class ComentariosModel{
   }
 
 
-    function crearComentario($comentario,$puntaje){
-      $sentencia = $this->db->prepare('INSERT INTO comentario(coment,puntaje) VALUES(?,?)');
-      $sentencia->execute(array($comentario,$puntaje));
+    function crearComentario($comentario,$puntaje,$id_producto){
+      $sentencia = $this->db->prepare('INSERT INTO comentario(coment,puntaje,fk_id_producto) VALUES(?,?,?)');
+      $sentencia->execute(array($comentario,$puntaje,$id_producto));
       $id_comentario = $this->db->lastInsertId();
 
 

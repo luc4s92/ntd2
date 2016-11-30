@@ -32,11 +32,13 @@ class ComentariosApi extends Api
     //    break;
         case 'POST':
             if(count($argumentos)==0){
-              $error['Error'] = "La tarea no se creo";
+              $error['Error'] = "La tarea no sea creo";
               $comentario = $_POST['comentario'];
+              $id_producto = $_POST['id_producto'];
               $puntaje = $_POST['puntaje'];
-              $id_comentario = $this->model->crearComentario($comentario,$puntaje );
-              //return ($id_tarea > 0) ? $this->model->getComentario($id_comentario) : $error;
+              $id_comentario = $this->model->crearComentario($comentario,$puntaje,$id_producto );
+              $error['Error'] = "asd";
+              return ($id_comentario > 0) ? $this->model->getComentario($id_comentario) : $error;
             }
           break;
       default:
