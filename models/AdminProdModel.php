@@ -51,6 +51,14 @@ class AdminProdModel{
     return $id_producto;
   }
 
+  function getProducto($id_producto){
+    $sentencia = $this->db->prepare( "select * from producto where id_producto=?");
+    $sentencia->execute(array($id_producto));
+    $producto = $sentencia->fetch(PDO::FETCH_ASSOC);
+    $producto['imagenes']= $this->getImagenes($id_producto);
+    return $producto;
+  }
+  
   function eliminarProducto($id_producto){
     $sentencia = $this->db->prepare("delete from producto where id_producto=?");
     $sentencia->execute(array($id_producto));

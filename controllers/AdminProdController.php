@@ -36,17 +36,26 @@ class AdminProdController extends Controller  {
      if(isset($_FILES['imagenes'])){
        $imagenesVerificadas = $this->getImagenesVerificadas($_FILES['imagenes']);
        if(count($imagenesVerificadas)>0){
-         $this->modelo->crearProducto($producto,$id_categoria,$imagenesVerificadas);
+         $this->model->crearProducto($producto,$id_categoria,$imagenesVerificadas);
            }
        }
-
+       $productos = $this->model->getCategorias();
+       $this->view->listaAdminProd($productos);
    }
 
    function borrarProducto(){
      $key = $_GET['id_producto'];
-     $this->modelo->eliminarProducto($key);
-     $productos = $this->modelo->getCategorias();
-     $this->vista->listaAdminProd($productos);
+     $this->model->eliminarProducto($key);
+     $productos = $this->model->getCategorias();
+     $this->view->listaAdminProd($productos);
+   }
+
+   function updateProd(){
+
+           $id_producto = $_GET['id_producto'];
+           $producto = $this->model->getProducto($id_producto);
+           $this->view->editProd($producto);
+
    }
 }
 

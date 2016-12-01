@@ -20,17 +20,17 @@ class AdminCatController extends Controller  {
   function guardarCategoria(){
 
       $categoria = $_POST['categoria'];
-      $this->modelo->crearCategoria($categoria);
-      $categorias = $this->modelo->getCategorias();
-      $this->vista->listaAdminCat($categorias);
+      $this->model->crearCategoria($categoria);
+      $categorias = $this->model->getCategorias();
+      $this->view->listaAdminCat($categorias);
 
   }
 
   function updateCat(){
 
           $id_categoria = $_GET['id_categoria'];
-          $categoria = $this->modelo->getCategoria($id_categoria);
-          $this->vista->editCat($categoria);
+          $categoria = $this->model->getCategoria($id_categoria);
+          $this->view->editCat($categoria);
 
   }
 
@@ -38,16 +38,16 @@ class AdminCatController extends Controller  {
 
       $id_categoria = $_POST['id_categoria'];
       $nuevacat = $_POST['nuevacat'];
-      $this->modelo->editarCategoria($id_categoria,$nuevacat);
+      $this->model->editarCategoria($id_categoria,$nuevacat);
 
   }
 
   function borrarCategoria(){
 
         $key = $_GET['id_categoria'];
-        $this->modelo->eliminarCategoria($key);
-        $categorias = $this->modelo->getCategorias();
-        $this->vista->listaAdminCat($categorias);
+        $this->model->eliminarCategoria($key);
+        $categorias = $this->model->getCategorias();
+        $this->view->listaAdminCat($categorias);
 
   }
 }

@@ -13,26 +13,26 @@ class ComentariosApi extends Api
   }
   protected function comentarios($argumentos){
     switch ($this->method) {
-    ////  case 'GET':
-    ////      if(count($argumentos)>0){
-    ////        $tarea = $this->model->getTarea($argumentos[0]);
-    ////        $error['Error'] = "La tarea no existe";
-    ////        return ($tarea) ? $tarea : $error;
-      ////    }else{
-      ////      return $this->model->getTareas();
-      ////    }
-      ////  break;
-  //    case 'DELETE':
-  //        if(count($argumentos)>0){
-  //          $error['Error'] = "La tarea no existe";
-    //        $success['Success'] = "La tarea se borro";
-      //      $filasAfectadas = $this->model->eliminarTarea($argumentos[0]);
-    //        return ($filasAfectadas == 1) ? $success : $error;
-      //    }
-    //    break;
+      case 'GET':
+        if(count($argumentos)>0){
+          $Comentario = $this->model->getComentario($argumentos[0]);
+          $error['Error'] = "El comentario no existe";
+            return ($Comentario) ? $Comentario : $error;
+          }else{
+            return $this->model->getComentarios();
+          }
+          break;
+        case 'DELETE':
+         if(count($argumentos)>0){
+            $error['Error'] = "El comentario no existe";
+           $success['Success'] = "El comentario se borro";
+            $filasAfectadas = $this->model->eliminarComentario($argumentos[0]);
+           return ($filasAfectadas == 1) ? $success : $error;
+          }
+       break;
         case 'POST':
             if(count($argumentos)==0){
-              $error['Error'] = "La tarea no sea creo";
+              $error['Error'] = "El comentario no se creo";
               $comentario = $_POST['comentario'];
               $id_producto = $_POST['id_producto'];
               $puntaje = $_POST['puntaje'];

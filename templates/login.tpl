@@ -16,5 +16,5 @@
           </div>
         {/if}
         <button id="LoginBtn" class="btn btn-lg btn-primary btn-block" type="submit">Acceder</button>
+            <a href="#" id=register >Registrarse </a>
       </form>
-    

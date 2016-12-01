@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-29 22:21:18
+/* Smarty version 3.1.30, created on 2016-12-01 03:34:41
   from "C:\xampp\htdocs\ntd2\templates\body.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583df14ecac428_84416962',
+  'unifunc' => 'content_583f8c415b2664_56659015',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f2135d3883f528797f16476cad79808ccbcf864e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ntd2\\templates\\body.tpl',
-      1 => 1480454474,
+      1 => 1480559678,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:home.tpl' => 1,
   ),
 ),false)) {
-function content_583df14ecac428_84416962 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583f8c415b2664_56659015 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <body>
 
@@ -42,14 +42,14 @@ function content_583df14ecac428_84416962 (Smarty_Internal_Template $_smarty_tpl)
 						      <ul class="nav navbar-nav navbar-right">
 							        <li><a   id="Productos" href="#" >Productos</a></li>
 											<li><a  id="mostrarContactoBtn" href="#">Contacto</a></li>
-											<li><a  id="login" href="#">Login</a></li>
+											<li><a  id="mostrarlogin" href="#">Login</a></li>
 											<li class="dropdown">
 													<a class="dropdown-toggle active" data-toggle="dropdown" href="#"> Administracion <span class="caret"></span></a>
 													<ul class="dropdown-menu">
 													<li><a  id="adminProductoBtn" href="#"> Admin Productos </a></li>
 													<li role="presentation" class="divider"></li>
 													<li><a  id="adminCategoriaBtn" href="#"> Admin Categoria </a></li>
-													<li><a  id="adminBtn" href="#"> Admin  </a></li>
+													<li><a  id="AdminUsuarios" href="#"> Admin Usuarios  </a></li>
 													</ul>
 											</li>
 								 </ul>

@@ -13,7 +13,7 @@ class LoginController  {
   function logout(){
     session_start();
     session_destroy();
-    header("Location: index.php");
+    header("Location: index.php?action=mostrar_admin"); // redirija a algo copado
     die();
   }
 
@@ -41,6 +41,37 @@ class LoginController  {
     }
 
     $this->view->mostrar();
+  }
+  function mostrarlogin(){
+      // si no tiene usuarios la bd muestra en tpl de registro, sino el login
+    $us = $this->model->getUsuarios();
+    if ($us != null){
+    $this->view->mostrarlogin();
+    }
+    else{
+      $this->view->registro();
+    }
+  }
+  function mostrarRegistro(){
+    $this->view->registro();
+  }
+
+
+  function guardarUsuario(){
+    $usuario = $_POST['usuario'];
+    $pw = $_POST['pw'];
+    $pass = password_hash($pw, PASSWORD_DEFAULT);
+    $us = $this->model->getUsuarios();
+    if ($us != null){
+    $privilegios = 3;
+    $this->model->crearUsuario($usuario,$pass,$privilegios);
+    $this->view->mostrarlogin();
+    }
+    else{
+      $privilegios = 1;
+      $this->model->crearUsuario($usuario,$pass,$privilegios);
+      $this->view->mostrarlogin();
+    }
   }
 }
 

@@ -17,14 +17,14 @@
 						      <ul class="nav navbar-nav navbar-right">
 							        <li><a   id="Productos" href="#" >Productos</a></li>
 											<li><a  id="mostrarContactoBtn" href="#">Contacto</a></li>
-											<li><a  id="login" href="#">Login</a></li>
+											<li><a  id="mostrarlogin" href="#">Login</a></li>
 											<li class="dropdown">
 													<a class="dropdown-toggle active" data-toggle="dropdown" href="#"> Administracion <span class="caret"></span></a>
 													<ul class="dropdown-menu">
 													<li><a  id="adminProductoBtn" href="#"> Admin Productos </a></li>
 													<li role="presentation" class="divider"></li>
 													<li><a  id="adminCategoriaBtn" href="#"> Admin Categoria </a></li>
-													<li><a  id="adminBtn" href="#"> Admin  </a></li>
+													<li><a  id="AdminUsuarios" href="#"> Admin Usuarios  </a></li>
 													</ul>
 											</li>
 								 </ul>

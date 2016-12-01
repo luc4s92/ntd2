@@ -12,6 +12,7 @@ class ComentariosModel{
   }
 
 
+
     function crearComentario($comentario,$puntaje,$id_producto){
       $sentencia = $this->db->prepare('INSERT INTO comentario(coment,puntaje,fk_id_producto) VALUES(?,?,?)');
       $sentencia->execute(array($comentario,$puntaje,$id_producto));
@@ -27,10 +28,10 @@ class ComentariosModel{
       return $sentencia->rowCount();
     }
 
-    function getComentario($id_comentario){
-          $sentencia = $this->db->prepare( "select * from comentario where id_comentario=?");
-          $sentencia->execute(array($id_comentario));
-          $comentario = $sentencia->fetch(PDO::FETCH_ASSOC);
+    function getComentario($id_producto){
+          $sentencia = $this->db->prepare( "select * from comentario where fk_id_producto=?");
+          $sentencia->execute(array($id_producto));
+          $comentario = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
         return $comentario;
   }

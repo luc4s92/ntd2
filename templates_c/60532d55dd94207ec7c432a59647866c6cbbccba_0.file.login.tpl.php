@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 01:35:48
+/* Smarty version 3.1.30, created on 2016-12-01 03:04:04
   from "C:\xampp\htdocs\ntd2\templates\login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583a2a64e08631_19213568',
+  'unifunc' => 'content_583f85143cacb6_08228799',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60532d55dd94207ec7c432a59647866c6cbbccba' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ntd2\\templates\\login.tpl',
-      1 => 1480203526,
+      1 => 1480557839,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583a2a64e08631_19213568 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583f85143cacb6_08228799 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -50,7 +50,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
           </div>
         <?php }?>
         <button id="LoginBtn" class="btn btn-lg btn-primary btn-block" type="submit">Acceder</button>
+            <a href="#" id=register >Registrarse </a>
       </form>
-    
 <?php }
 }

@@ -12,5 +12,19 @@ class UsuariosModel extends Model {
   $usuario = $this->getUsuario($email);
   return $usuario['privilegio'];
 }
+
+function getUsuarios(){
+  //obtiene la lista de categorias de la tabla
+  $sentencia = $this->db->prepare("select * from usuario");
+  $sentencia->execute();
+  $usuarios = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  return $usuarios;
+}
+
+function crearUsuario($usuario,$pw,$privilegios){
+  $sentencia = $this->db->prepare("INSERT INTO usuario(email,password,privilegio) VALUES(?,?,?)");
+  $sentencia->execute(array($usuario,$pw,$privilegios));
+}
+
 }
 ?>

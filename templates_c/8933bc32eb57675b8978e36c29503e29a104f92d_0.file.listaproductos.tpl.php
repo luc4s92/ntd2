@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-28 21:57:28
+/* Smarty version 3.1.30, created on 2016-12-01 04:42:05
   from "C:\xampp\htdocs\ntd2\templates\listaproductos.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583c9a38662851_01790872',
+  'unifunc' => 'content_583f9c0dda3395_36903373',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8933bc32eb57675b8978e36c29503e29a104f92d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ntd2\\templates\\listaproductos.tpl',
-      1 => 1479168747,
+      1 => 1480563720,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583c9a38662851_01790872 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583f9c0dda3395_36903373 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ul>
   <?php
@@ -39,7 +39,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['adminProducto']->value => $_smarty_tp
       <li>
       <?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre'];?>
 
-      <a class="" href="#" data-producto="<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+      <a class="updateProd" href="#" data-idproducto="<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
 "><span class="glyphicon glyphicon-pencil " aria-hidden="true"></span></a>
       <a class="eliminarProducto" href="#" data-idproducto="<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
 "><span class="glyphicon glyphicon-remove-sign " aria-hidden="true"></span></a>

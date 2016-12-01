@@ -8,9 +8,12 @@ function mostrar(){
   $this->smarty->display('login.tpl');
 }
 
-function mostrarHola(){
+function mostrarlogin(){
   $this->smarty->assign('errores', $this->errores);
-  $this->smarty->display('hola.tpl');
+  $this->smarty->display('login.tpl');
+}
+function registro(){
+  $this->smarty->display('register.tpl');
 }
 
 }

@@ -17,5 +17,9 @@ class AdminProdView{
     $this->smarty->assign('categorias',$categorias);
     $this->smarty->display('listaproductos.tpl');
   }
+  function editProd($producto){
+    $this->smarty->assign('producto',$producto);
+    $this->smarty->display('actualizarProducto.tpl');
+  }
 }
  ?>

@@ -8,7 +8,7 @@ class NtdController   {
   function __construct() {
     $this->modelo = new NtdModel();
     $this->vista = new NtdView();
-//    $this->checkSesion();
+
   }
 
   function mostrarHome(){
@@ -16,7 +16,8 @@ class NtdController   {
   }
   function verProductos(){
     $categorias = $this->modelo->getCategorias();
-    $this->vista->Productos($categorias);
+    $productos = $this->modelo->getProd();
+    $this->vista->Productos($categorias,$productos);
   }
   function verProducto(){
     $id_producto = $_GET['id_producto'];
@@ -27,7 +28,13 @@ class NtdController   {
 function mostrar_contacto() {
   $this->vista->mostrarContacto();
 }
+function verProductosCat(){
+  $id_categoria = $_GET['id_categoria'];
+  $productos =$this->modelo->getProductos($id_categoria);
+  $categoria = $this->modelo->getCategoria($id_categoria);
+  $this->vista->mostrarProductosCat($categoria,$productos);
 
+}
 
 }
 
